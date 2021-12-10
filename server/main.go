@@ -11,6 +11,7 @@ func main() {
 	gin.SetMode(gin.ReleaseMode)
 	router := gin.New()
 	router.GET("/", func(c *gin.Context) {
+		c.Header("Server", "Gin/v1.7.7")
 		c.Data(http.StatusOK, "text/html; charset=utf-8", []byte(`<!DOCTYPE html>
 <html lang="en">
 <head>
